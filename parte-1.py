@@ -21,5 +21,11 @@ mydb = mysql.connector.connect(
 )
 
 print(mydb)
-#La salida de la consola debería ser algo como:
+#Si la concexión fue exitosa la salida de la consola debería ser algo como:
 # <mysql.connector.connection_cext.CMySQLConnection object at 0x000001DCA710F090>
+
+#Creamos el cursor para mandar comandos SQL a la base de datos
+mycursor = mydb.cursor()
+
+#Con este comando creamos una base de datos llamada "scaloneta"
+mycursor.execute("CREATE DATABASE scaloneta")
